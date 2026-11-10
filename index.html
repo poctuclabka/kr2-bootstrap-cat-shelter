@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Приют для кошек ищет дом для своих подопечных. Помогите нам спасти жизни!">
+  <title>Главная — Приют для кошек «Мурлыка»</title>
+  
+  <!-- Локальный Bootstrap CSS -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <!-- Наш custom.css (строго после Bootstrap!) -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🐾 Мурлыка</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalog.html">Каталог кошек</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Предложить помощь</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="curators.html">Кураторы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Дополнительно
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html#faq">Частые вопросы</a></li>
+              <li><a class="dropdown-item" href="catalog.html">Все подопечные</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="order.html">Как помочь?</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Основной контент -->
+  <main class="flex-grow-1">
+    
+    <!-- Hero-блок -->
+    <section class="container my-5">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-5 fw-bold text-dark">Подарите дом пушистому другу</h1>
+          <p class="lead text-muted">
+            Мы — приют для кошек «Мурлыка». У нас живут десятки замечательных животных, 
+            которые мечтают обрести любящую семью. Станьте волонтёром, помогите кормом 
+            или заберите котика домой.
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-primary btn-lg" href="catalog.html">Смотреть каталог</a>
+            <a class="btn btn-outline-secondary btn-lg" href="order.html">Предложить помощь</a>
+          </div>
+        </div>
+                <div class="col-12 col-lg-6 text-center">
+          <!-- Hero-картинка -->
+          <img src="images/cat-hero.jpg" 
+               class="img-fluid rounded shadow-lg" 
+               alt="Котик из приюта Мурлыка" 
+               style="max-height: 450px; width: 100%; object-fit: cover;">
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Карусель (дополнительный компонент из методичек) -->
+    <!-- Карусель (Истории спасения) -->
+       <!-- Карусель (Истории спасения) -->
+    <section class="container mb-5">
+      <h2 class="text-center mb-4">Истории спасения</h2>
+      
+      <div id="storyCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+        
+        <!-- Индикаторы -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+          
+          <!-- Слайд 1: Шаня (обычное заполнение) -->
+          <div class="carousel-item active" style="background-image: url('images/cat-shanya.jpg');">
+            <div class="carousel-caption text-center">
+              <h3 class="fw-bold">Спасение Шани</h3>
+              <p class="d-none d-md-block">Шаню нашли на улице холодной зимой. Благодаря заботе волонтёров она стала ласковой и ищет семью.</p>
+            </div>
+          </div>
+          
+          <!-- Слайд 2: Изюм (обычное заполнение) -->
+          <div class="carousel-item" style="background-image: url('images/cat-izyum.jpg');">
+            <div class="carousel-caption text-center">
+              <h3 class="fw-bold">Путь Изюма</h3>
+              <p class="d-none d-md-block">Изюм попал к нам с проблемами здоровья. Благодаря диете и любви он снова полон сил.</p>
+            </div>
+          </div>
+          
+<!-- Слайд 3: Блю -->
+<div class="carousel-item" style="background-image: url('images/cat-blu.jpg'); background-size: cover; background-position: center 40%; background-repeat: no-repeat; background-color: #4a4a4a;">
+  <div class="carousel-caption text-start">
+    <h3 class="fw-bold">Особенный Блю</h3>
+    <p class="d-none d-md-block">У Блю есть особенности здоровья, но он самый нежный котик. Ищем людей с большим сердцем.</p>
+  </div>
+</div>
+          
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#storyCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#storyCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Срочно ищут дом (карточки) -->
+    <section class="container my-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Ищут дом больше всех</h2>
+        <a class="btn btn-outline-primary" href="catalog.html">Все кошки</a>
+      </div>
+      <div class="row g-4">
+        
+        <!-- Карточка кота 1 -->
+                <!-- Шаня -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm cat-card">
+            <img src="images/cat-shanya.jpg" class="card-img-top object-fit-cover" style="height: 400px;" alt="Кошка Шаня">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h5 card-title mb-0">Шаня</h3>
+                <span class="badge bg-danger">Срочно</span>
+              </div>
+             <p class="card-text text-muted small mb-3">
+  Возраст: 10 лет. Окрас: серая. Ласковая, но пугливая.
+</p>
+              <a href="product-shanya.html" class="btn btn-primary mt-auto">Познакомиться</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Изюм -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm cat-card">
+            <img src="images/cat-izyum.jpg" class="card-img-top object-fit-cover" style="height: 400px;" alt="Кот Изюм">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h5 card-title mb-0">Изюм</h3>
+                <span class="badge bg-warning text-dark">Нужна диета</span>
+              </div>
+              <p class="card-text text-muted small mb-3">
+  Возраст: меньше года. Окрас: чёрный. Игривый.
+</p>
+              <a href="product-izyum.html" class="btn btn-primary mt-auto">Познакомиться</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Блю -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm cat-card">
+           <img src="images/cat-blu.jpg" class="card-img-top object-fit-cover" style="height: 400px;" alt="Кот Блю">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h5 card-title mb-0">Блю</h3>
+                <span class="badge bg-info text-dark">Инвалид</span>
+              </div>
+              <p class="card-text text-muted small mb-3">
+  Возраст: 3 года. Окрас: серый. Особенный котик, ищущий заботу.
+</p>
+              <a href="product-blu.html" class="btn btn-primary mt-auto">Познакомиться</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ (Аккордеон) -->
+    <section class="container my-5" id="faq">
+      <h2 class="text-center mb-4">Частые вопросы</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Как забрать кошку из приюта?
+            </button>
+          </h3>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Нужно заполнить заявку на странице «Предложить помощь», после чего с вами свяжется куратор кошки, проведёт собеседование и назначит день встречи.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Чем я могу помочь, кроме переезда кошки?
+            </button>
+          </h3>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Вы можете стать волонтёром, передать корм или лекарства, предложить временную передержку или помочь финансово. Все варианты описаны на странице помощи.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2026 Приют «Мурлыка». Учебный проект.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a class="text-white text-decoration-none me-3" href="catalog.html">Каталог</a>
+          <a class="text-white text-decoration-none" href="order.html">Помощь</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Кнопка "Наверх" -->
+  <a href="#top" class="btn btn-primary rounded-circle scroll-top" id="scroll-top" aria-label="Наверх">↑</a>
+
+  <!-- Локальный Bootstrap JS Bundle -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Наш скрипт -->
+  <script src="js/main.js"></script>
+</body>
+</html>

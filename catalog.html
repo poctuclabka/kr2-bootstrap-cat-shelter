@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог кошек приюта Мурлыка. Найдите своего друга.">
+  <title>Каталог кошек — Приют «Мурлыка»</title>
+  
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Навигация (копируем с главной) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🐾 Мурлыка</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="catalog.html">Каталог кошек</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Предложить помощь</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="curators.html">Кураторы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+    <div class="container my-4">
+      
+      <!-- Хлебные крошки (из КР 1) -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+        </ol>
+      </nav>
+
+      <h1 class="mb-4">Наши подопечные</h1>
+
+      <!-- Информационное сообщение (Alert из методички) -->
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Внимание!</strong> Используйте фильтры слева, чтобы найти идеального питомца для вашей семьи.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+      </div>
+
+            <div class="row g-4">
+        <!-- Фильтры -->
+        <div class="col-lg-3">
+          <div class="catalog-filters sticky-top">
+            <div class="card shadow-sm border-0">
+              <div class="card-header bg-white fw-bold py-3">Фильтры</div>
+              <div class="card-body">
+                <!-- Добавили id="filter-form" -->
+                <form id="filter-form">
+                  
+                  <fieldset class="mb-3">
+                    <legend class="h6 mb-2">Пол</legend>
+                    <div class="form-check">
+                      <input class="form-check-input filter-radio" type="radio" name="gender" id="genderAll" value="all" checked>
+                      <label class="form-check-label" for="genderAll">Не важно</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input filter-radio" type="radio" name="gender" id="genderCat" value="cat">
+                      <label class="form-check-label" for="genderCat">Кошка</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input filter-radio" type="radio" name="gender" id="genderTom" value="tom">
+                      <label class="form-check-label" for="genderTom">Кот</label>
+                    </div>
+                  </fieldset>
+
+                  <div class="mb-4">
+                    <label for="ageSelect" class="form-label h6">Возраст</label>
+                    <select class="form-select filter-select" id="ageSelect">
+                      <option value="all" selected>Любой</option>
+                      <option value="kitten">Котёнок (до 1 года)</option>
+                      <option value="adult">Взрослый (1-7 лет)</option>
+                      <option value="senior">Пожилой (от 7 лет)</option>
+                    </select>
+                  </div>
+
+                  <!-- Добавили кнопку сброса -->
+                  <button type="button" class="btn btn-outline-secondary w-100" id="reset-filters">Сбросить фильтры</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Сетка карточек -->
+        <div class="col-lg-9">
+          <!-- Добавили id="catalog-grid" -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="catalog-grid">
+            
+            <!-- Шаня (data-gender="cat", data-age="senior") -->
+            <div class="col cat-item" data-gender="cat" data-age="senior">
+              <div class="card h-100 shadow-sm cat-card">
+                <img src="images/cat-shanya.jpg" class="card-img-top" style="height: 220px; object-fit: cover; object-position: center;" alt="Шаня">
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="card-title mb-0">Шаня</h5>
+                    <span class="badge bg-danger">Срочно</span>
+                  </div>
+                  <p class="card-text text-muted small mb-3">
+                    <strong>Возраст:</strong> 10 лет<br>
+                    <strong>Пол:</strong> Кошка<br>
+                    <strong>Окрас:</strong> Серая<br>
+                    <strong>Характер:</strong> Ласковая, пугливая
+                  </p>
+                  <a href="product-shanya.html" class="btn btn-outline-primary mt-auto">Подробнее</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Изюм (data-gender="tom", data-age="kitten") -->
+            <div class="col cat-item" data-gender="tom" data-age="kitten">
+              <div class="card h-100 shadow-sm cat-card">
+                <img src="images/cat-izyum.jpg" class="card-img-top" style="height: 220px; object-fit: cover; object-position: center;" alt="Изюм">
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="card-title mb-0">Изюм</h5>
+                    <span class="badge bg-warning text-dark">Нужна диета</span>
+                  </div>
+                  <p class="card-text text-muted small mb-3">
+                    <strong>Возраст:</strong> Меньше года<br>
+                    <strong>Пол:</strong> Кот<br>
+                    <strong>Окрас:</strong> Чёрный<br>
+                    <strong>Характер:</strong> Игривый
+                  </p>
+                  <a href="product-izyum.html" class="btn btn-outline-primary mt-auto">Подробнее</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Князь (data-gender="tom", data-age="adult") -->
+            <div class="col cat-item" data-gender="tom" data-age="adult">
+              <div class="card h-100 shadow-sm cat-card">
+                <img src="images/cat-knyaz.jpg" class="card-img-top" style="height: 220px; object-fit: cover; object-position: center;" alt="Князь">
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="card-title mb-0">Князь</h5>
+                    <span class="badge bg-success">Здоров</span>
+                  </div>
+                  <p class="card-text text-muted small mb-3">
+                    <strong>Возраст:</strong> 5 лет<br>
+                    <strong>Пол:</strong> Кот<br>
+                    <strong>Окрас:</strong> Чёрно-белый<br>
+                    <strong>Характер:</strong> Независимый, спокойный
+                  </p>
+                  <a href="product-knyaz.html" class="btn btn-outline-primary mt-auto">Подробнее</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Блю (data-gender="tom", data-age="adult") -->
+            <div class="col cat-item" data-gender="tom" data-age="adult">
+              <div class="card h-100 shadow-sm cat-card">
+                <img src="images/cat-blu.jpg" class="card-img-top" style="height: 220px; object-fit: cover; object-position: center 30%;" alt="Блю">
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="card-title mb-0">Блю</h5>
+                    <span class="badge bg-info text-dark">Инвалид</span>
+                  </div>
+                  <p class="card-text text-muted small mb-3">
+                    <strong>Возраст:</strong> 3 года<br>
+                    <strong>Пол:</strong> Кот<br>
+                    <strong>Окрас:</strong> Серый<br>
+                    <strong>Характер:</strong> Ласковый
+                  </p>
+                  <a href="product-blu.html" class="btn btn-outline-primary mt-auto">Подробнее</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Сообщение, если ничего не найдено -->
+            <div class="col-12 text-center py-5 d-none" id="no-results">
+              <h4 class="text-muted">По вашему запросу никого не нашлось 😿</h4>
+              <p>Попробуйте изменить параметры фильтра.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 Приют «Мурлыка». Учебный проект.</p>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

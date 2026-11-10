@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Предложить помощь приюту для кошек Мурлыка: волонтерство, корм, передержка.">
+  <title>Предложить помощь — Приют «Мурлыка»</title>
+  
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Навигация (с активным пунктом "Предложить помощь") -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🐾 Мурлыка</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог кошек</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Предложить помощь</a></li>
+          <li class="nav-item"><a class="nav-link" href="curators.html">Кураторы</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+    <div class="container my-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Предложить помощь</li>
+        </ol>
+      </nav>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          
+          <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary text-white py-3">
+              <h1 class="h4 mb-0">Стать волонтёром или помочь приюту</h1>
+            </div>
+            <div class="card-body p-4">
+              
+              <!-- Сообщение об успехе (скрыто по умолчанию) -->
+              <div class="alert alert-success d-none" id="formSuccess" role="alert">
+                Спасибо! Ваша заявка отправлена. Куратор свяжется с вами в ближайшее время.
+              </div>
+
+              <!-- Форма (используем классы из методички) -->
+              <form id="helpForm" novalidate>
+                
+                <!-- Выбор типа помощи (Select) -->
+                <div class="mb-4">
+                  <label for="helpType" class="form-label fw-bold">Чем вы хотите помочь? <span class="text-danger">*</span></label>
+                  <select class="form-select" id="helpType" required>
+  <option value="" selected disabled>Выберите вариант...</option>
+  <option value="volunteer">Стать волонтёром</option>
+  <option value="food">Передать корм или лекарства</option>
+  <option value="foster">Взять на временную передержку</option>
+  <option value="curator">Связаться с куратором</option>
+  <option value="finance">Финансовая помощь</option>
+</select>
+                  <div class="invalid-feedback">Пожалуйста, выберите тип помощи.</div>
+                </div>
+
+                <!-- Блок с персональными данными (Сетка) -->
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label for="userName" class="form-label">Ваше имя <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="userName" placeholder="Иван Иванов" required minlength="2">
+                    <div class="invalid-feedback">Введите ваше имя.</div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="userPhone" class="form-label">Телефон <span class="text-danger">*</span></label>
+                    <!-- input-group для телефона -->
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">+7</span>
+                      <input type="tel" class="form-control" id="userPhone" placeholder="(900) 123-45-67" required pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                      <div class="invalid-feedback">Введите номер телефона (10 цифр).</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label for="userEmail" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="userEmail" placeholder="example@mail.ru">
+                </div>
+
+                <!-- Комментарий -->
+                <div class="mb-4">
+                  <label for="userComment" class="form-label">Комментарий (если есть)</label>
+                  <textarea class="form-control" id="userComment" rows="3" placeholder="Напишите детали вашего предложения..."></textarea>
+                </div>
+
+                <!-- Чекбокс (form-check) -->
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" id="agreeCheck" required>
+                  <label class="form-check-label" for="agreeCheck">
+                    Я согласен на обработку персональных данных и получение обратной связи <span class="text-danger">*</span>
+                  </label>
+                  <div class="invalid-feedback">Необходимо согласие на обработку данных.</div>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <button type="submit" class="btn btn-primary btn-lg flex-grow-1">Отправить заявку</button>
+                  <button type="reset" class="btn btn-outline-secondary btn-lg">Очистить</button>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 Приют «Мурлыка». Учебный проект.</p>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

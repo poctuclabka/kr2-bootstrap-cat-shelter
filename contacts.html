@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контактная информация приюта для кошек Мурлыка.">
+  <title>Контакты — Приют «Мурлыка»</title>
+  
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🐾 Мурлыка</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог кошек</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Предложить помощь</a></li>
+          <li class="nav-item"><a class="nav-link" href="curators.html">Кураторы</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+    <div class="container my-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+        </ol>
+      </nav>
+
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h1 class="mb-4">Свяжитесь с нами</h1>
+          <p class="text-muted mb-4">Мы всегда рады помочь вам и нашим пушистым подопечным. Приезжайте в гости или пишите!</p>
+          
+          <ul class="list-unstyled fs-5 mb-4">
+            <li class="mb-3 d-flex align-items-center">
+              <span class="fs-4 me-3">📍</span> 
+              <div>
+                <strong>Адрес приюта:</strong><br>
+                г. Москва, ул. Кошачья, д. 12 (вход со двора)
+              </div>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <span class="fs-4 me-3">📞</span> 
+              <div>
+                <strong>Телефон:</strong><br>
+                <a href="tel:+79000000000" class="text-decoration-none">+7 (900) 000-00-00</a>
+              </div>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <span class="fs-4 me-3">✉️</span> 
+              <div>
+                <strong>E-mail:</strong><br>
+                <a href="mailto:info@murlyka-shelter.ru" class="text-decoration-none">info@murlyka-shelter.ru</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <!-- Блок с часами работы (Bootstrap Card) -->
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-header bg-primary text-white fw-bold py-3">
+              🕒 Часы работы
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Понедельник — Пятница
+                <span class="badge bg-primary rounded-pill">10:00 – 18:00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Суббота — Воскресенье
+                <span class="badge bg-success rounded-pill">11:00 – 16:00</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Информационное сообщение (Alert) -->
+          <div class="alert alert-warning" role="alert">
+            <h4 class="alert-heading h6 fw-bold">Внимание!</h4>
+            <p class="mb-0 small">Пожалуйста, предупредите о визите заранее по телефону, чтобы куратор смог вас встретить и провести в кошачьи комнаты.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 Приют «Мурлыка». Учебный проект.</p>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

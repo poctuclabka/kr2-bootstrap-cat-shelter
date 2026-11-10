@@ -1,0 +1,138 @@
+/* ===============================
+   Кастомные стили для Приюта
+   =============================== */
+
+/* Убираем стандартный отступ у sticky-фильтров, чтобы не наезжали на navbar */
+.sticky-sidebar {
+  position: sticky;
+  top: 90px; /* Высота navbar + отступ */
+  z-index: 10;
+}
+
+/* Стили для карточек кошек */
+.cat-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* Красивые звезды для рейтинга */
+.stars {
+  color: #ffc107; /* Bootstrap warning color */
+  font-size: 1.2rem;
+}
+
+/* Кнопка "Наверх" */
+.scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1050; /* Выше, чем modal-backdrop на всякий случай */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.scroll-top--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===============================
+   Стили для каталога (Фильтры)
+   =============================== */
+.catalog-filters {
+  /* sticky-top от Bootstrap делает фильтры прилипающими, 
+     мы лишь задаем позицию, чтобы они не перекрывались шапкой */
+  top: 90px; 
+  z-index: 10;
+}
+
+/* Немного стилизуем скроллбар внутри фильтров, если он появится */
+.catalog-filters::-webkit-scrollbar {
+  width: 6px;
+}
+.catalog-filters::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* Делаем картинки-заглушки для котиков аккуратнее */
+.cat-img-placeholder {
+  height: 220px;
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+
+/* ===============================
+   Страница кошки (product)
+   =============================== */
+.cat-main-img {
+  background-color: #e9ecef;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+
+/* Рейтинг звезд */
+.rating-stars {
+  color: #ffc107;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+/* Карточки отзывов */
+.review-card {
+  border-left: 4px solid #0d6efd; /* Primary Bootstrap color */
+  background-color: #fff;
+}
+
+/* ===============================
+   Стили для карусели
+   =============================== */
+.carousel-item {
+  height: 450px; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Затемнение фона */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  bottom: 50%; 
+  transform: translateY(50%); 
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Тень для текста */
+}
+
+/* На телефонах */
+@media (max-width: 768px) {
+  .carousel-item { height: 350px; }
+  .carousel-caption h3 { font-size: 1.5rem; }
+}
