@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Шаня — Приют «Мурлыка»</title>
+  <title>Багира — Приют «Мурлыка»</title>
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
-  <!-- Навигация (копируем с главной) -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">🐾 Мурлыка</a>
@@ -32,14 +31,13 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
           <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
-          <li class="breadcrumb-item active">Шаня</li>
+          <li class="breadcrumb-item active">Багира</li>
         </ol>
       </nav>
 
       <div class="row g-5">
-        <!-- ЛЕВАЯ КОЛОНКА: Фото и Калькулятор -->
         <div class="col-lg-6">
-          <img src="images/cat-bagira.jpg" class="img-fluid rounded shadow-sm w-100 mb-4" alt="Шаня" style="max-height: 500px; object-fit: cover;">
+          <img src="images/cat-bagira.jpg" class="img-fluid rounded shadow-sm w-100 mb-4" alt="Кошка Багира" style="max-height: 500px; object-fit: cover;">
           
           <div class="card shadow-sm border-0">
             <div class="card-header bg-primary text-white fw-bold">🧮 Калькулятор содержания</div>
@@ -47,7 +45,6 @@
               <div class="mb-3">
                 <label for="calcWeight" class="form-label">Вес кошки (кг):</label>
                 <div class="input-group">
-                  <!-- Для Шани ставим вес 4 кг по умолчанию -->
                   <input type="number" class="form-control" id="calcWeight" value="4" min="0.5" step="0.5">
                   <span class="input-group-text">кг</span>
                 </div>
@@ -56,8 +53,8 @@
                 <label for="calcAge" class="form-label">Возраст:</label>
                 <select class="form-select" id="calcAge">
                   <option value="kitten">Котёнок</option>
-                  <!-- Для Шани выбираем "Пожилая" по умолчанию, так как ей 10 лет -->
-                  <option value="senior" selected>Пожилая</option>
+                  <option value="adult" selected>Взрослая</option>
+                  <option value="senior">Пожилая</option>
                 </select>
               </div>
               <div class="alert alert-success mb-0 py-2">
@@ -67,11 +64,10 @@
           </div>
         </div>
 
-        <!-- ПРАВАЯ КОЛОНКА: Информация -->
         <div class="col-lg-6">
           <div class="d-flex justify-content-between align-items-center mb-2">
-            <h1 class="display-5 fw-bold mb-0">Шаня</h1>
-            <span class="badge bg-danger fs-6">Срочно ищет дом</span>
+            <h1 class="display-5 fw-bold mb-0">Багира</h1>
+            <span class="badge bg-primary fs-6">Ласковая</span>
           </div>
           <p class="lead mb-4">Багира — общительная и нежная кошечка. Она обожает внимание, всегда встречает гостей у двери и с удовольствием свернется клубочком на ваших коленях.</p>
           
@@ -98,12 +94,11 @@
     </div>
   </main>
 
-  <!-- Модальное окно -->
   <div class="modal fade" id="askCuratorModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title">Вопрос куратору Екатерине (Шаня)</h5>
+          <h5 class="modal-title">Вопрос куратору Екатерине (Багира)</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
