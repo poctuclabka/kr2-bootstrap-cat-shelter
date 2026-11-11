@@ -93,5 +93,57 @@ document.addEventListener('DOMContentLoaded', () => {
   // Включаем формы для Екатерины и Алексея
   setupReviewForm('review-form-ekaterina', 'new-reviews-container-ekaterina', 'review-name-ekaterina', 'review-stars-ekaterina', 'review-text-ekaterina');
   setupReviewForm('review-form-alexey', 'new-reviews-container-alexey', 'review-name-alexey', 'review-stars-alexey', 'review-text-alexey');
+    // ==========================================
+  // 5. Фильтрация в каталоге (catalog.html)
+  // ==========================================
+  const filterForm = document.getElementById('filter-form');
+  const catalogGrid = document.getElementById('catalog-grid');
+  
+  if (filterForm && catalogGrid) {
+    const catItems = document.querySelectorAll('.cat-item');
+    const noResultsMsg = document.getElementById('no-results');
+    const resetBtn = document.getElementById('reset-filters');
 
+    function filterCats() {
+      // Получаем выбранные значения
+      const selectedGender = document.querySelector('input[name="gender"]:checked').value;
+      const selectedAge = document.getElementById('ageSelect').value;
+      
+      let visibleCount = 0;
+
+      // Перебираем все карточки
+      catItems.forEach(item => {
+        const itemGender = item.getAttribute('data-gender');
+        const itemAge = item.getAttribute('data-age');
+
+        // Проверяем совпадения
+        const genderMatch = (selectedGender === 'all' || itemGender === selectedGender);
+        const ageMatch = (selectedAge === 'all' || itemAge === selectedAge);
+
+        if (genderMatch && ageMatch) {
+          item.classList.remove('d-none'); // Показываем
+          visibleCount++;
+        } else {
+          item.classList.add('d-none'); // Скрываем
+        }
+      });
+
+      // Показываем сообщение, если ничего не найдено
+      if (visibleCount === 0) {
+        noResultsMsg.classList.remove('d-none');
+      } else {
+        noResultsMsg.classList.add('d-none');
+      }
+    }
+
+    // Слушаем изменения в фильтрах (радиокнопки и селект)
+    filterForm.addEventListener('change', filterCats);
+
+    // Кнопка сброса
+    resetBtn.addEventListener('click', () => {
+      filterForm.reset(); // Сбрасываем форму
+      document.getElementById('genderAll').checked = true; // Ставим радио "Не важно"
+      filterCats(); // Применяем фильтр
+    });
+  }
 });
