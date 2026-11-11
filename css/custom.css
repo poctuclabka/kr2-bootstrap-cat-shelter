@@ -35,65 +35,66 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  background-color: #0d6efd; /* Ярко-синий (Bootstrap Primary) */
-  color: #fff; /* Белая лапка */
-  font-size: 28px; 
+  width: 55px;
+  height: 55px;
+  background-color: #e9ecef; /* Светло-серый фон (Bootstrap bg-light) */
+  color: #333; /* Темная лапка для контраста */
+  font-size: 24px; 
   text-decoration: none;
-  border-radius: 50%; /* Круглая форма */
-  border: none;
-  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4); /* Синяя тень */
+  border-radius: 50%;
+  border: 2px solid #dee2e6; /* Легкая окантовка */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   
-  /* Скрываем по умолчанию */
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
 }
 
-/* Ушки (треугольники) */
+/* Ушки (делаем их острее и выдвигаем выше) */
 .scroll-top::before,
 .scroll-top::after {
   content: "";
   position: absolute;
-  top: -12px; /* Выдвигаем ушки вверх */
+  top: -12px; /* Выдвигаем выше */
   width: 0;
   height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 20px solid #0d6efd; /* Цвет ушек такой же, как у кнопки */
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 18px solid #e9ecef; /* Цвет ушек как у кнопки */
   transition: all 0.3s ease;
-  z-index: -1; /* Ушки уходят за спину кнопки */
+  z-index: -1;
 }
 
 /* Левое ушко */
 .scroll-top::before {
-  left: 4px;
-  transform: rotate(-20deg);
+  left: 5px;
+  transform: rotate(-20deg); /* Чуть сильнее наклоняем */
 }
 
 /* Правое ушко */
 .scroll-top::after {
-  right: 4px;
+  right: 5px;
   transform: rotate(20deg);
 }
 
-/* Появление кнопки */
+/* Появление */
 .scroll-top--visible {
   opacity: 1;
   visibility: visible;
 }
 
-/* Наведение (кнопка подпрыгивает и становится темнее) */
+/* Наведение */
 .scroll-top:hover {
-  background-color: #0b5ed7; /* Темно-синий */
-  color: #fff;
-  transform: translateY(-5px) scale(1.05);
+  background-color: #0d6efd; /* Синий при наведении */
+  color: #fff; /* Белая лапка при наведении */
+  border-color: #0d6efd;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
 }
 
 .scroll-top:hover::before,
 .scroll-top:hover::after {
-  border-bottom-color: #0b5ed7; /* Ушки тоже темнеют */
+  border-bottom-color: #0d6efd; /* Ушки тоже синеют */
 }
 
 /* ===============================
