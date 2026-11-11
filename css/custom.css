@@ -35,15 +35,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 55px;
-  height: 55px;
-  background-color: #212529; /* Темный цвет, как у навбара */
-  color: #fff;
-  font-size: 24px; /* Размер лапки */
+  width: 60px;
+  height: 60px;
+  background-color: #0d6efd; /* Ярко-синий (Bootstrap Primary) */
+  color: #fff; /* Белая лапка */
+  font-size: 28px; 
   text-decoration: none;
-  border-radius: 50%;
-  border: 3px solid #0d6efd; /* Синяя окантовка */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  border-radius: 50%; /* Круглая форма */
+  border: none;
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4); /* Синяя тень */
   
   /* Скрываем по умолчанию */
   opacity: 0;
@@ -51,49 +51,49 @@
   transition: all 0.3s ease;
 }
 
-/* Ушки для котика (создаем через псевдоэлементы) */
+/* Ушки (треугольники) */
 .scroll-top::before,
 .scroll-top::after {
   content: "";
   position: absolute;
-  top: -10px;
+  top: -12px; /* Выдвигаем ушки вверх */
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 15px solid #0d6efd; /* Цвет ушек совпадает с окантовкой */
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid #0d6efd; /* Цвет ушек такой же, как у кнопки */
   transition: all 0.3s ease;
+  z-index: -1; /* Ушки уходят за спину кнопки */
 }
 
+/* Левое ушко */
 .scroll-top::before {
-  left: 6px;
-  transform: rotate(-15deg);
+  left: 4px;
+  transform: rotate(-20deg);
 }
 
+/* Правое ушко */
 .scroll-top::after {
-  right: 6px;
-  transform: rotate(15deg);
+  right: 4px;
+  transform: rotate(20deg);
 }
 
-/* Состояние, когда кнопка видна */
+/* Появление кнопки */
 .scroll-top--visible {
   opacity: 1;
   visibility: visible;
 }
 
-/* Анимация при наведении (котик подпрыгивает) */
+/* Наведение (кнопка подпрыгивает и становится темнее) */
 .scroll-top:hover {
-  background-color: #0d6efd; /* Синий цвет при наведении */
+  background-color: #0b5ed7; /* Темно-синий */
   color: #fff;
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.4);
+  transform: translateY(-5px) scale(1.05);
 }
 
-.scroll-top:hover::before {
-  border-bottom-color: #fff; /* Ушки белеют */
-}
+.scroll-top:hover::before,
 .scroll-top:hover::after {
-  border-bottom-color: #fff;
+  border-bottom-color: #0b5ed7; /* Ушки тоже темнеют */
 }
 
 /* ===============================
