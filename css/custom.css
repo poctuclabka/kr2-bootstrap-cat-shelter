@@ -24,29 +24,76 @@
   font-size: 1.2rem;
 }
 
-/* Кнопка "Наверх" */
+/* ===============================
+   Кнопка "Наверх" (Кошачья лапка)
+   =============================== */
 .scroll-top {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 1050; /* Выше, чем modal-backdrop на всякий случай */
+  z-index: 1050;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background-color: #212529; /* Темный цвет, как у навбара */
+  color: #fff;
+  font-size: 24px; /* Размер лапки */
   text-decoration: none;
-  font-size: 20px;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  border: 3px solid #0d6efd; /* Синяя окантовка */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  
+  /* Скрываем по умолчанию */
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: all 0.3s ease;
 }
+
+/* Ушки для котика (создаем через псевдоэлементы) */
+.scroll-top::before,
+.scroll-top::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #0d6efd; /* Цвет ушек совпадает с окантовкой */
+  transition: all 0.3s ease;
+}
+
+.scroll-top::before {
+  left: 6px;
+  transform: rotate(-15deg);
+}
+
+.scroll-top::after {
+  right: 6px;
+  transform: rotate(15deg);
+}
+
+/* Состояние, когда кнопка видна */
 .scroll-top--visible {
   opacity: 1;
   visibility: visible;
+}
+
+/* Анимация при наведении (котик подпрыгивает) */
+.scroll-top:hover {
+  background-color: #0d6efd; /* Синий цвет при наведении */
+  color: #fff;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.4);
+}
+
+.scroll-top:hover::before {
+  border-bottom-color: #fff; /* Ушки белеют */
+}
+.scroll-top:hover::after {
+  border-bottom-color: #fff;
 }
 
 /* ===============================
