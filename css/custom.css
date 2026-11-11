@@ -37,43 +37,41 @@
   justify-content: center;
   width: 55px;
   height: 55px;
-  background-color: #e9ecef; /* Светло-серый фон (Bootstrap bg-light) */
-  color: #333; /* Темная лапка для контраста */
+  background-color: #343a40; /* Темно-серый (как навигация) */
+  color: #ffffff; /* Белая лапка */
   font-size: 24px; 
   text-decoration: none;
   border-radius: 50%;
-  border: 2px solid #dee2e6; /* Легкая окантовка */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 2px solid #212529; /* Еще более темная окантовка */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
 }
 
-/* Ушки (делаем их острее и выдвигаем выше) */
+/* Ушки (в цвет кнопки) */
 .scroll-top::before,
 .scroll-top::after {
   content: "";
   position: absolute;
-  top: -12px; /* Выдвигаем выше */
+  top: -14px; /* Высоко поднимаем */
   width: 0;
   height: 0;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  border-bottom: 18px solid #e9ecef; /* Цвет ушек как у кнопки */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #343a40; /* Темные ушки */
   transition: all 0.3s ease;
   z-index: -1;
 }
 
-/* Левое ушко */
 .scroll-top::before {
-  left: 5px;
-  transform: rotate(-20deg); /* Чуть сильнее наклоняем */
+  left: 4px;
+  transform: rotate(-20deg);
 }
 
-/* Правое ушко */
 .scroll-top::after {
-  right: 5px;
+  right: 4px;
   transform: rotate(20deg);
 }
 
@@ -83,13 +81,13 @@
   visibility: visible;
 }
 
-/* Наведение */
+/* Наведение (становится синим, как кнопки на сайте) */
 .scroll-top:hover {
-  background-color: #0d6efd; /* Синий при наведении */
-  color: #fff; /* Белая лапка при наведении */
+  background-color: #0d6efd; 
+  color: #ffffff; 
   border-color: #0d6efd;
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
 }
 
 .scroll-top:hover::before,
