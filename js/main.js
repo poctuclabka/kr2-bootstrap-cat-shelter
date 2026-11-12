@@ -93,6 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Включаем формы для Екатерины и Алексея
   setupReviewForm('review-form-ekaterina', 'new-reviews-container-ekaterina', 'review-name-ekaterina', 'review-stars-ekaterina', 'review-text-ekaterina');
   setupReviewForm('review-form-alexey', 'new-reviews-container-alexey', 'review-name-alexey', 'review-stars-alexey', 'review-text-alexey');
+    // Включаем формы для Марины и Игоря
+  setupReviewForm('review-form-marina', 'new-reviews-container-marina', 'review-name-marina', 'review-stars-marina', 'review-text-marina');
+  setupReviewForm('review-form-igor', 'new-reviews-container-igor', 'review-name-igor', 'review-stars-igor', 'review-text-igor');
     // ==========================================
   // 5. Фильтрация в каталоге (catalog.html)
   // ==========================================

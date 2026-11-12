@@ -208,9 +208,170 @@
             </div>
           </div>
         </div>
+                <!-- КУРАТОР 3: Марина -->
+        <div class="col-lg-6 mt-4"> <!-- mt-4 добавит отступ сверху, чтобы ряды не слипались -->
+          <div class="card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-secondary bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 70px; height: 70px;">
+                  <img src="images/curator-marina.avif" class="rounded-circle me-3 shadow-sm object-fit-cover" alt="Екатерина" style="width: 70px; height: 70px;">
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Марина</h3>
+                  <div class="rating-stars small mb-1">★★★★★ <span class="text-muted fs-6">(5.0)</span></div>
+                  <span class="badge bg-info text-dark">Ветеринар</span>
+                </div>
+              </div>
+              <p class="text-muted small">Отвечает за здоровье подопечных, назначение диет и реабилитацию после операций.</p>
+              
+              <h4 class="h6 mt-4 mb-3">Подопечные:</h4>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <a href="product-blu.html" class="btn btn-sm btn-outline-secondary">🐈 Блю</a>
+                <a href="product-semen.html" class="btn btn-sm btn-outline-secondary">🐈 Семён</a>
+              </div>
+
+              <!-- Блок с отзывами Марины -->
+              <h4 class="h6 mt-4 mb-3 border-top pt-3">Отзывы обо мне</h4>
+              
+              <div id="existing-reviews-marina">
+                <div class="card bg-light border-0 mb-3">
+                  <div class="card-body p-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <strong class="small">Ольга</strong>
+                      <span class="rating-stars fs-6">★★★★★</span>
+                    </div>
+                    <p class="card-text small text-muted mb-0">Марина выходила моего котика после сложной операции. Профессионал с большой буквы!</p>
+                  </div>
+                </div>
+                <div class="card bg-light border-0 mb-3">
+                  <div class="card-body p-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <strong class="small">Павел</strong>
+                      <span class="rating-stars fs-6">★★★★★</span>
+                    </div>
+                    <p class="card-text small text-muted mb-0">Всегда на связи, подробно объясняет, как давать лекарства. Очень благодарен за помощь с Семёном.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Контейнер для новых отзывов Марины -->
+              <div id="new-reviews-container-marina"></div>
+
+              <!-- Форма отзыва для Марины -->
+              <div class="review-form-wrapper">
+                <h4 class="h6 mt-4 mb-3 border-top pt-3">Оставить отзыв</h4>
+                <form id="review-form-marina">
+                  <div class="mb-2">
+                    <input type="text" class="form-control form-control-sm" id="review-name-marina" placeholder="Ваше имя" required>
+                  </div>
+                  <div class="mb-2">
+                    <select class="form-select form-select-sm" id="review-stars-marina" required>
+                      <option value="" selected disabled>Выберите оценку</option>
+                      <option value="5">★★★★★ (Отлично)</option>
+                      <option value="4">★★★★☆ (Хорошо)</option>
+                      <option value="3">★★★☆☆ (Нормально)</option>
+                      <option value="2">★★☆☆☆ (Плохо)</option>
+                      <option value="1">★☆☆☆☆ (Ужасно)</option>
+                    </select>
+                  </div>
+                  <div class="mb-2">
+                    <textarea class="form-control form-control-sm" id="review-text-marina" rows="2" placeholder="Ваш отзыв..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-sm btn-primary w-100">Отправить отзыв</button>
+                </form>
+              </div>
+
+            </div>
+            <div class="card-footer bg-white border-top-0 pt-0 pb-3 px-4">
+              <a href="order.html" class="btn btn-primary w-100">Связаться с куратором</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- КУРАТОР 4: Игорь -->
+        <div class="col-lg-6 mt-4">
+          <div class="card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-secondary bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 70px; height: 70px;">
+                   <img src="images/curator-igor.avif" class="rounded-circle me-3 shadow-sm object-fit-cover" alt="Екатерина" style="width: 70px; height: 70px;">
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Игорь</h3>
+                  <div class="rating-stars small mb-1">★★★★☆ <span class="text-muted fs-6">(4.5)</span></div>
+                  <span class="badge bg-secondary">SMM-специалист</span>
+                </div>
+              </div>
+              <p class="text-muted small">Отвечает за поиск новых хозяев через соцсети, фотосессии котиков и ведение групп приюта.</p>
+              
+              <h4 class="h6 mt-4 mb-3">Подопечные:</h4>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <a href="product-leva.html" class="btn btn-sm btn-outline-secondary">🐈 Лёва</a>
+                <a href="product-mila.html" class="btn btn-sm btn-outline-secondary">🐈 Мила</a>
+                <a href="product-tisha.html" class="btn btn-sm btn-outline-secondary">🐈 Тиша</a>
+              </div>
+
+              <!-- Блок с отзывами Игоря -->
+              <h4 class="h6 mt-4 mb-3 border-top pt-3">Отзывы обо мне</h4>
+              
+              <div id="existing-reviews-igor">
+                <div class="card bg-light border-0 mb-3">
+                  <div class="card-body p-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <strong class="small">Елена</strong>
+                      <span class="rating-stars fs-6">★★★★☆</span>
+                    </div>
+                    <p class="card-text small text-muted mb-0">Благодаря постам Игоря я увидела Милу и влюбилась! Отличные фото и трогательные тексты.</p>
+                  </div>
+                </div>
+                <div class="card bg-light border-0 mb-3">
+                  <div class="card-body p-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <strong class="small">Александр</strong>
+                      <span class="rating-stars fs-6">★★★★★</span>
+                    </div>
+                    <p class="card-text small text-muted mb-0">Очень оперативно отвечает в соцсетях и помогает с оформлением. Спасибо за Лёву!</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Контейнер для новых отзывов Игоря -->
+              <div id="new-reviews-container-igor"></div>
+
+              <!-- Форма отзыва для Игоря -->
+              <div class="review-form-wrapper">
+                <h4 class="h6 mt-4 mb-3 border-top pt-3">Оставить отзыв</h4>
+                <form id="review-form-igor">
+                  <div class="mb-2">
+                    <input type="text" class="form-control form-control-sm" id="review-name-igor" placeholder="Ваше имя" required>
+                  </div>
+                  <div class="mb-2">
+                    <select class="form-select form-select-sm" id="review-stars-igor" required>
+                      <option value="" selected disabled>Выберите оценку</option>
+                      <option value="5">★★★★★ (Отлично)</option>
+                      <option value="4">★★★★☆ (Хорошо)</option>
+                      <option value="3">★★★☆☆ (Нормально)</option>
+                      <option value="2">★★☆☆☆ (Плохо)</option>
+                      <option value="1">★☆☆☆☆ (Ужасно)</option>
+                    </select>
+                  </div>
+                  <div class="mb-2">
+                    <textarea class="form-control form-control-sm" id="review-text-igor" rows="2" placeholder="Ваш отзыв..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-sm btn-primary w-100">Отправить отзыв</button>
+                </form>
+              </div>
+
+            </div>
+            <div class="card-footer bg-white border-top-0 pt-0 pb-3 px-4">
+              <a href="order.html" class="btn btn-primary w-100">Связаться с куратором</a>
+            </div>
+          </div>
+        </div>
   </main>
 
- <footer class="bg-dark text-white pt-5 pb-4 mt-auto">
+<!-- Подвал -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-auto">
     <div class="container">
       <div class="row g-4">
         
@@ -221,12 +382,6 @@
             Мы — приют для кошек, который помогает бездомным животным найти любящих хозяев. 
             Каждый котик заслуживает теплый дом и заботу.
           </p>
-          <div class="d-flex gap-3 mt-3">
-            <!-- Иконки соцсетей (заглушки) -->
-            <a href="#" class="text-white text-decoration-none fs-5" aria-label="ВКонтакте">ВК</a>
-            <a href="#" class="text-white text-decoration-none fs-5" aria-label="Telegram">TG</a>
-            <a href="#" class="text-white text-decoration-none fs-5" aria-label="YouTube">YT</a>
-          </div>
         </div>
 
         <!-- Колонка 2: Навигация -->
@@ -236,38 +391,54 @@
             <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none hover-white">Главная</a></li>
             <li class="mb-2"><a href="catalog.html" class="text-white-50 text-decoration-none hover-white">Каталог кошек</a></li>
             <li class="mb-2"><a href="curators.html" class="text-white-50 text-decoration-none hover-white">Кураторы</a></li>
-            <li class="mb-2"><a href="contacts.html" class="text-white-50 text-decoration-none hover-white">Контакты</a></li>
+            <!-- Ссылку на Контакты убрали из этой колонки -->
           </ul>
         </div>
 
-        <!-- Колонка 3: Помощь -->
+        <!-- Колонка 3: Как помочь -->
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
           <h5 class="text-white mb-3 fs-6 text-uppercase fw-bold">Как помочь</h5>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="order.html" class="text-white-50 text-decoration-none hover-white">Предложить помощь</a></li>
             <li class="mb-2"><a href="order.html" class="text-white-50 text-decoration-none hover-white">Стать волонтёром</a></li>
             <li class="mb-2"><a href="order.html" class="text-white-50 text-decoration-none hover-white">Взять на передержку</a></li>
-            <li class="mb-2"><a href="index.html#faq" class="text-white-50 text-decoration-none hover-white">Частые вопросы</a></li>
+            <!-- Ссылку на FAQ убрали из этой колонки -->
           </ul>
         </div>
 
-        <!-- Колонка 4: Контакты -->
+        <!-- Колонка 4: Контакты (Обновленная) -->
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
           <h5 class="text-white mb-3 fs-6 text-uppercase fw-bold">Контакты</h5>
           <ul class="list-unstyled text-white-50 small">
+            <!-- Адрес -->
             <li class="mb-2 d-flex">
               <span class="me-2">📍</span>
               <span>г. Москва, ул. Кошачья, д. 12</span>
             </li>
+            <!-- Телефон -->
             <li class="mb-2 d-flex">
               <span class="me-2">📞</span>
               <a href="tel:+79000000000" class="text-white-50 text-decoration-none hover-white">+7 (900) 000-00-00</a>
             </li>
+            
+            <!-- Почта (теперь выше времени работы) -->
             <li class="mb-2 d-flex">
               <span class="me-2">✉️</span>
               <a href="mailto:info@murlyka-shelter.ru" class="text-white-50 text-decoration-none hover-white">info@murlyka-shelter.ru</a>
             </li>
-            <li class="d-flex mt-3">
+
+            <!-- Соцсети (теперь сразу под почтой) -->
+            <li class="mb-3 d-flex align-items-center">
+              <span class="me-2">🌐</span>
+              <div class="d-flex gap-3">
+                <a href="#" class="text-white text-decoration-none hover-white fw-bold" aria-label="ВКонтакте">ВК</a>
+                <a href="#" class="text-white text-decoration-none hover-white fw-bold" aria-label="Telegram">TG</a>
+                <a href="#" class="text-white text-decoration-none hover-white fw-bold" aria-label="YouTube">YT</a>
+              </div>
+            </li>
+
+            <!-- Время работы (теперь ниже соцсетей) -->
+            <li class="d-flex mt-3 border-top border-secondary pt-3">
               <span class="me-2">🕒</span>
               <span>Пн-Пт: 10:00 – 18:00<br>Сб-Вс: 11:00 – 16:00</span>
             </li>
@@ -280,7 +451,7 @@
       <div class="border-top border-secondary mt-4 pt-4 text-center text-md-start">
         <div class="row align-items-center">
           <div class="col-md-6 mb-2 mb-md-0">
-            <p class="text-white-50 small mb-0">&copy; 2026 Приют «Мурлыка». </p>
+            <p class="text-white-50 small mb-0">&copy; 2026 Приют «Мурлыка».</p>
           </div>
           
         </div>
